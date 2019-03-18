@@ -1,0 +1,93 @@
+@font-face {
+		font-family: 'BadaboomBB';
+		src: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/badaboombb.woff2')              format('woff2'),
+		     url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/badaboombb.woff')              format('woff');
+		font-style: normal;
+		font-weight: 200px;
+		}
+
+* + * {
+	box-sizing: border-box;
+}
+body {
+	background: white;
+	margin: 6px;
+  
+}
+section.comic {
+	max-width: 1200px;
+	margin: 1rem auto;
+	background: #fff;
+  
+}
+.grid-crop {
+	margin: 0.5rem 1rem;
+	overflow: hidden;
+  
+}
+.grid {
+	transform: skewY(1.5deg);
+	display: flex;
+	flex-wrap: wrap;
+	margin: -2rem;
+  
+}
+.cell {
+	margin: .5rem;
+	min-width: 280px;
+	flex: 1 1 100px;
+	padding: 0 20px;
+	display: flex;
+	justify-content: flex-start;
+	transform: skewX(-8deg);
+  border-color: black;
+  border-style: solid;
+  border-width: 3px;
+  font-family: 'BadaboomBB';
+	src: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/badaboombb.woff2')
+}
+.container {
+	margin: 2rem;
+	transform: skew(8deg, -1.5deg);
+	top: 2rem;
+	left: 2.5rem;
+	right: 3rem;
+  //position: absolute;
+}
+.one {
+	flex-basis: 200px;
+	background: #36c5e7;
+  
+}
+
+.two {
+	flex-basis: 360px;
+	background: #ffee25;
+  position:center;
+}
+.three {
+	flex-basis: 480px;
+	background: #6e679a;
+}
+	.four{
+	flex-basis: 480px;
+	background: #ff9726;
+	}
+.five{
+	flex-basis: 480px;
+	background: #ff839b;
+}
+
+.flip {
+	.cell {
+	}
+	.grid {
+		transform: skewY(-1.5deg);
+	}
+	.cell {
+		transform: skewX(8deg);
+	}
+	.container {
+		transform: skew(-8deg, 1.5deg)
+	}
+}
